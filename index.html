@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>MiniBlog</title>
+</head>
+
+<body>
+    <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+                type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+                type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+            <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled"
+                type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false"
+                disabled>Disabled</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
+                type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings"
+                type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+            <!-- home-page -->
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+                tabindex="0">
+                <div class="stories-container">
+                    <div class="story">
+                        <img src="images/Rend_0000-removebg-preview.png" alt="Story 1">
+                        <span class="username">user1</span>
+                    </div>
+                    <div class="story">
+                        <img src="images/Rend_0000-removebg-preview.png" alt="Story 2">
+                        <span class="username">user2</span>
+                    </div>
+                    <div class="story">
+                        <img src="images/Rend_0000-removebg-preview.png" alt="Story 3">
+                        <span class="username">user2</span>
+                    </div>
+                    <div class="story">
+                        <img src="images/Rend_0000-removebg-preview.png" alt="Story 4">
+                        <span class="username">user2</span>
+                    </div>
+                    <div class="story">
+                        <img src="images/Rend_0000-removebg-preview.png" alt="Story 5">
+                        <span class="username">user2</span>
+                    </div>
+                    <div class="story">
+                        <img src="images/Rend_0000-removebg-preview.png" alt="Story 5">
+                        <span class="username">user2</span>
+                    </div>
+                    <div class="story">
+                        <img src="images/Rend_0000-removebg-preview.png" alt="Story 6">
+                        <span class="username">user2</span>
+                    </div>
+                    <div class="story">
+                        <img src="images/Rend_0000-removebg-preview.png" alt="Story 7">
+                        <span class="username">user2</span>
+                    </div>
+                </div>
+                <hr>
+                <!-- post-content -->
+                <div class="post-content">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/fe5b042c73bd65ec79ee6f37179bf897-removebg-preview.png"
+                                    class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5><i class="fa-regular fa-heart"
+                                        style="color: #000000;"></i>
+                                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                                    <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
+                                    <p class="card-text">93 likes</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add commnet"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                                class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/fe5b042c73bd65ec79ee6f37179bf897-removebg-preview.png"
+                                    class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5><i class="fa-regular fa-heart"
+                                        style="color: #000000;"></i>
+                                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                                    <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
+                                    <p class="card-text">93 likes</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add commnet"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                                class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/fe5b042c73bd65ec79ee6f37179bf897-removebg-preview.png"
+                                    class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5><i class="fa-regular fa-heart"
+                                        style="color: #000000;"></i>
+                                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                                    <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
+                                    <p class="card-text">93 likes</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add commnet"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                                class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="images/fe5b042c73bd65ec79ee6f37179bf897-removebg-preview.png"
+                                    class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5><i class="fa-regular fa-heart"
+                                        style="color: #000000;"></i>
+                                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                                    <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
+                                    <p class="card-text">93 likes</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Add commnet"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                                class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- profil-page -->
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+                tabindex="0">
+                <div class="top-profil">
+                    <img src="images/Rend_0000-removebg-preview.png" alt="Story 3">
+                    <div class="profil-infos">
+                        <div class="profil-info-top">
+                            <h3>Userresu</h3>
+                            <button type="button" class="btn btn-secondary">Edit profile</button>
+                            <button type="button" class="btn btn-secondary">View archive</button>
+                            <i class="fa-solid fa-gear" style="color: #000000;"></i>
+                        </div>
+                        <div class="profil-info-middle">
+                            <h6>10 posts</h6>
+                            <h6>200 followers</h6>
+                            <h6>300 following</h6>
+                        </div>
+                        <div class="profil-info-buttom">
+                            <p>User resu</p>
+                            <a href="#" class="btn active" role="button" data-bs-toggle="button"
+                                aria-pressed="true">@useresu</a>
+                            <p>bio</p>
+                            <i class="fa-brands fa-facebook" style="color: #000000;">facebook profil</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttom-profil">
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                    <div class="image"><img src="images/81598afbccb6d9422ba4605a8d826711-removebg-preview.png" alt=""></div>
+                </div>
+            </div>
+            <!-- disabled-page -->
+            <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+                tabindex="0">...</div>
+            <!-- messages-page -->
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+                tabindex="0">...</div>
+            <!-- Settings -->
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+                tabindex="0">...</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

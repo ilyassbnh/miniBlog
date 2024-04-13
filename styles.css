@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.stories-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.story {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.story img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.username {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+.post-content{
+    margin-left: 10%;
+}
+
+
+.top-profil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+.top-profil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.profil-info-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    margin: 10px;
+}
+.profil-info-middle{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+.profil-info-buttom{
+    margin: 10px;
+}
+.profil-info-buttom i {
+    font-size: x-small;
+
+}
