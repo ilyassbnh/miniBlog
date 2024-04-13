@@ -31,7 +31,8 @@ body {
     font-size: 14px;
     color: #333;
 }
-.post-content{
+
+.post-content {
     margin-left: 10%;
 }
 
@@ -44,13 +45,15 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
 }
-.top-profil{
+
+.top-profil {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+
 }
-.profil-info-top{
+
+.profil-info-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -58,15 +61,85 @@ body {
     align-items: center;
     margin: 10px;
 }
-.profil-info-middle{
+
+.profil-info-middle {
     display: flex;
     justify-content: space-around;
     margin: 10px;
 }
-.profil-info-buttom{
+
+.profil-info-buttom {
     margin: 10px;
 }
+
 .profil-info-buttom i {
     font-size: x-small;
 
+}
+
+.buttom-profil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.buttom-profil .image {
+    height: auto;
+    width: 250px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.buttom-profil .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.buttom-profil .image:hover img {
+    transform: scale(1.1);
+}
+
+.popup {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup .card {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translate;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750xp;
+    object-fit: cover;
+}
+@media (max-width:768px) {
+    .popup .card{
+        width: 95%;
+    }
 }
