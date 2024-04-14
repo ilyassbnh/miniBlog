@@ -1,6 +1,6 @@
-document.querySelectorAll('.popup .image').forEach(image => {
+document.querySelectorAll('.post-image').forEach(image => {
     image.onclick = () => {
-        image.nextElementSibling.style.display = 'block'; 
+        image.parentElement.nextElementSibling.style.display = 'block'; 
     }
 });
 document.querySelectorAll('.popup span').forEach(closeButton => {
@@ -8,4 +8,3 @@ document.querySelectorAll('.popup span').forEach(closeButton => {
         closeButton.parentElement.style.display = 'none';
     }
 });
-
