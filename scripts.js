@@ -42,5 +42,23 @@ document.addEventListener("DOMContentLoaded", function () {
     likeButtons.forEach((button, index) => {
         button.addEventListener("click", toggleLike(index));
     });
+    const input = document.getElementById('imageUpload');
+    input.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const imagePreview = document.createElement('img');
+            imagePreview.src = e.target.result;
+            document.body.appendChild(imagePreview);
+        };
+        reader.readAsDataURL(file);
+    });
+
+    //add post
+    function addPost(){
+        var text = document.getElementById('postText').value;
+        var imageInput = document.getElementById('imageUpload');
+    }
+    
 
 });
