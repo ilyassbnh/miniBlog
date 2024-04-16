@@ -54,10 +54,60 @@ document.addEventListener("DOMContentLoaded", function () {
         reader.readAsDataURL(file);
     });
 
-    //add post
-    function addPost(){
+    // Function to add a new post
+    function addPost() {
+        // Get the text and image input elements from the modal
         var text = document.getElementById('postText').value;
         var imageInput = document.getElementById('imageUpload');
+
+        // Get the container where posts will be added
+        var postsContainer = document.querySelector('.bottom-profil');
+
+        // Create a new post element
+        var post = document.createElement('div');
+        post.className = 'post';
+
+        // Create the card element for the post
+        var card = document.createElement('div');
+        card.className = 'card mb-3';
+        card.style.maxWidth = '540px';
+
+        // Create the card content
+        var cardContent = `
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="${imageInput.files[0].name}" class="img-fluid rounded-start" alt="Post Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <!-- Add like, comment, and share icons here -->
+                        <p class="card-text">${text}</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Add comment" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Set the card content
+        card.innerHTML = cardContent;
+
+        // Append the card to the post element
+        post.appendChild(card);
+
+        // Append the post to the posts container
+        postsContainer.appendChild(post);
+
+        // Close the modal
+        var modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+        modal.hide();
+
+        // Reset the input fields
+        document.getElementById('postText').value = '';
+        imageInput.value = '';
     }
     
 
