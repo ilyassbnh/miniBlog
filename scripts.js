@@ -1,12 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
     var popupImage = document.getElementById("popup-image");
-    document.querySelectorAll('.post-image').forEach(image => {
+
+    // Popup function for both existing and dynamically added posts
+    function attachPopupFunctionality() {
+        document.querySelectorAll('.post-image').forEach(image => {
+            image.onclick = () => {
+                var clickedImageSrc = image.querySelector("img").getAttribute("src");
+                popupImage.setAttribute("src", clickedImageSrc);
+                document.querySelector(".popup").style.display = "block";
+            }
+        });
+    }
+
+    // Initially attach popup functionality to existing posts
+    attachPopupFunctionality();
+
+    // Popup function for dynamically added posts
+    function attachPopupToNewPost(image) {
         image.onclick = () => {
-            var clickedImageSrc = image.querySelector("img").getAttribute("src");
+            var clickedImageSrc = image.getAttribute("src");
             popupImage.setAttribute("src", clickedImageSrc);
             document.querySelector(".popup").style.display = "block";
         }
-    });
+    }
+
     document.querySelector(".popup span").addEventListener("click", function () {
         document.querySelector(".popup").style.display = "none";
     });
@@ -50,11 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
         reader.onload = function (e) {
             const imagePreview = document.createElement('img');
             imagePreview.src = e.target.result;
-            // Add a class to the dynamically created image
+            // Add the existing class to the dynamically created image
             imagePreview.classList.add('post-image');
             // Append the dynamically added image to the "buttom-profil" div
             document.getElementById('posts').appendChild(imagePreview);
+            // Attach popup functionality to the dynamically added image
+            attachPopupToNewPost(imagePreview);
         };
         reader.readAsDataURL(file);
     });
+
 });
