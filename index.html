@@ -173,8 +173,74 @@
                     <div class="profil-infos">
                         <div class="profil-info-top">
                             <h3>Userresu</h3>
-                            <button type="button" class="btn btn-secondary">Edit post</button>
-                            
+                            <!-- Button trigger modal -->
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#UpdateModal">
+                                Update post
+                            </button> -->
+
+                            <!-- Modal -->
+                            <!-- <div class="modal fade" id="UpdateModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="UpdateModalLabel">Update Post</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="search by ID" aria-label="Username">
+                                              </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger" >Delete</button>
+                                            <button type="button" class="btn btn-primary" >Edit</button>
+                                            <button type="button" class="btn btn-success">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Update post</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="SerchByID" aria-label="Username">
+                                            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                          </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-danger" >Delete</button>
+                                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Edit</button>
+                                        <button type="button" class="btn btn-success">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Hide this modal and show the first with the button below.
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Update post</button>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
@@ -192,21 +258,23 @@
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="#"  method="post" enctype="multipart/form-data">
-                                                <input type="file"  name="image" id="imageUpload" accept="image/*">
+                                            <form action="#" method="post" enctype="multipart/form-data">
+                                                <input type="file" name="image" id="imageUpload" accept="image/*">
                                                 <div class="input-group">
                                                     <span class="input-group-text">Add caption</span>
-                                                    <textarea class="form-control" aria-label="With textarea" id="postText"></textarea>
-                                                  </div>
+                                                    <textarea class="form-control" aria-label="With textarea"
+                                                        id="postText"></textarea>
+                                                </div>
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" onclick="addPost()">Save changes</button>
+                                            <button type="button" class="btn btn-primary" onclick="addPost()">Save
+                                                changes</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
- 
+
                             <i class="fa-solid fa-gear" style="color: #000000;"></i>
                         </div>
                         <div class="profil-info-middle">
@@ -253,7 +321,8 @@
                                     <i class="fa-regular fa-comment" style="color: #000000;"></i>
                                     <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
                                     <p class="card-text">94 likes</p>
-                                    <p class="card-text" id="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <p class="card-text" id="comment">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit.</p>
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder="Add comment"
                                             aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -267,8 +336,8 @@
                 </div>
 
             </div>
-            </div>
         </div>
+    </div>
     </div>
 
 </body>
