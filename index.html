@@ -202,45 +202,63 @@
                                     </div>
                                 </div>
                             </div> -->
-                            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                                 <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Update post</h1>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Update post</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Search post"
+                                                    aria-label="Username">
+                                                <span class="input-group-text"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                                data-bs-toggle="modal">Edit</button>
+                                            <button type="button" class="btn btn-success">Save changes</button>
+                                        </div>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="SerchByID" aria-label="Username">
-                                            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                          </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-danger" >Delete</button>
-                                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Edit</button>
-                                        <button type="button" class="btn btn-success">Save changes</button>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            </div>
+                            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                                 <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <!-- modal 2 -->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Update post</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <input class="form-control" type="file" id="formFile">
+                                                <div class="form-floating">
+                                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                                    <label for="floatingTextarea2">Comments</label>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="button" class="btn btn-success" id="btn-save-edit">Save chages</button>
+                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
+                                                data-bs-toggle="modal">Back to first</button>
+                                        </div>
                                     </div>
-                                    <div class="modal-body">
-                                      Hide this modal and show the first with the button below.
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
-                              <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Update post</button>
+                            </div>
+                            <button class="btn btn-secondary" data-bs-target="#exampleModalToggle"
+                                data-bs-toggle="modal">Update post</button>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
