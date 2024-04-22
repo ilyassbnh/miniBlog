@@ -186,8 +186,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Search post"
-                                                    aria-label="Username">
+                                                <input type="text" class="form-control" placeholder="Search post" id="id-search" aria-label="Username">
                                                 <span class="input-group-text"><i
                                                         class="fa-solid fa-magnifying-glass"></i></span>
                                             </div>
@@ -195,7 +194,7 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
                                                 data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <button type="button" class="btn btn-danger" onclick="delete_function()" id="delete_button">Delete</button>
                                             <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
                                                 data-bs-toggle="modal">Edit</button>
                                             <button type="button" class="btn btn-success">Save changes</button>
