@@ -65,103 +65,14 @@
                 </div>
                 <hr>
                 <!-- post-content -->
-                <div class="post-content">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="images/fe5b042c73bd65ec79ee6f37179bf897-removebg-preview.png"
-                                    class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5><i class="fa-regular fa-heart"
-                                        style="color: #000000;"></i>
-                                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
-                                    <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
-                                    <p class="card-text">93 likes</p>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Add comment"
-                                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
-                                                class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="images/fe5b042c73bd65ec79ee6f37179bf897-removebg-preview.png"
-                                    class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5><i class="fa-regular fa-heart"
-                                        style="color: #000000;"></i>
-                                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
-                                    <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
-                                    <p class="card-text">93 likes</p>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Add comment"
-                                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
-                                                class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="images/fe5b042c73bd65ec79ee6f37179bf897-removebg-preview.png"
-                                    class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5><i class="fa-regular fa-heart"
-                                        style="color: #000000;"></i>
-                                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
-                                    <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
-                                    <p class="card-text">93 likes</p>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Add comment"
-                                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
-                                                class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="images/fe5b042c73bd65ec79ee6f37179bf897-removebg-preview.png"
-                                    class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5><i class="fa-regular fa-heart"
-                                        style="color: #000000;"></i>
-                                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
-                                    <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
-                                    <p class="card-text">93 likes</p>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Add comment"
-                                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
-                                                class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <form id="imageUploadForm">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <input type="text" id="titleInput" placeholder="Enter Title">
+                    <textarea id="descriptionInput" placeholder="Enter Description"></textarea>
+                    <button type="submit">Upload Image</button>
+                </form>
+                <div class="post-content" id="postsContainer">
+
                 </div>
             </div>
 
@@ -173,8 +84,8 @@
                     <div class="profil-infos">
                         <div class="profil-info-top">
                             <h3>Userresu</h3>
-                            
-                           
+
+
                             <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
                                 aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                                 <div class="modal-dialog modal-dialog-centered">
@@ -186,7 +97,8 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Search post" id="id-search" aria-label="Username">
+                                                <input type="text" class="form-control" placeholder="Search post"
+                                                    id="id-search" aria-label="Username">
                                                 <span class="input-group-text"><i
                                                         class="fa-solid fa-magnifying-glass"></i></span>
                                             </div>
@@ -194,7 +106,8 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
                                                 data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-danger" onclick="delete_function()" id="delete_button">Delete</button>
+                                            <button type="button" class="btn btn-danger" onclick="delete_function()"
+                                                id="delete_button">Delete</button>
                                             <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
                                                 data-bs-toggle="modal">Edit</button>
                                             <button type="button" class="btn btn-success">Save changes</button>
@@ -205,24 +118,27 @@
                             <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
                                 aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                                 <div class="modal-dialog modal-dialog-centered">
-                                        <!-- modal 2 -->
+                                    <!-- modal 2 -->
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Update post</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"aria-label="Close"></button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <div class="mb-3">
                                                 <input class="form-control" type="file" id="formFile">
                                                 <div class="form-floating">
-                                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                                    <textarea class="form-control" placeholder="Leave a comment here"
+                                                        id="floatingTextarea2" style="height: 100px"></textarea>
                                                     <label for="floatingTextarea2">Comments</label>
-                                                  </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            
-                                            <button type="button" class="btn btn-success" id="btn-save-edit">Save chages</button>
+
+                                            <button type="button" class="btn btn-success" id="btn-save-edit">Save
+                                                chages</button>
                                             <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
                                                 data-bs-toggle="modal">Back to first</button>
                                         </div>

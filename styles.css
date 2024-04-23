@@ -146,3 +146,40 @@ body {
 .like{
     height: 18px;
 }
+
+/* Style for form container */
+#imageUploadForm {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for input fields */
+  #imageInput, #titleInput, #descriptionInput {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  /* Style for submit button */
+  #imageUploadForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for submit button */
+  #imageUploadForm button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+  
