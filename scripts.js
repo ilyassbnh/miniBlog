@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         reader.readAsDataURL(file);
     });
+    
     //delete function
     const delet=document.getElementById("delete_button");
     const search=document.getElementById("id-search");
