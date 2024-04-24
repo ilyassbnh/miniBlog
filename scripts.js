@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
         const editButton = card.querySelector(".edit-btn");
         editButton.addEventListener("click", () => {
-          editingPostIndex = index; // Set the index of the post being edited
+          editingPostIndex = index; 
           const post = posts[index];
           document.getElementById("imageInput").value = ""; // Clear the input value to prevent re-uploading the image
           document.getElementById("titleInput").value = post.title;
@@ -83,7 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const imageInput = document.getElementById("imageInput");
       const titleInput = document.getElementById("titleInput");
       const descriptionInput = document.getElementById("descriptionInput");
-  
+      
+      //allows the user to upload an image
       const imageFile = imageInput.files[0];
       const reader = new FileReader();
   
@@ -91,12 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const imageData = reader.result;
   
         if (editingPostIndex !== null) {
-          // If editingPostIndex is not null, it means we are updating an existing post
+          // Si editingPostIndex n'est pas nul, cela signifie que nous MAJ une publication existante
           const editedPost = {
             image: imageData || posts[editingPostIndex].image, // Keep the existing image if no new image is selected
             title: titleInput.value,
-            likes: posts[editingPostIndex].likes, // Retain the existing likes count
-            liked: posts[editingPostIndex].liked, // Retain the existing liked status
+            likes: posts[editingPostIndex].likes, // Keep the existing likes count
+            liked: posts[editingPostIndex].liked, // Keep the existing liked status
             description: descriptionInput.value,
           };
   
