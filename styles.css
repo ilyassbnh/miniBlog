@@ -146,10 +146,7 @@ body {
 .like{
     height: 18px;
 }
-.post-contents{
-    display: flex;
-    
-}
+
 /* Style for form container */
 #imageUploadForm {
     max-width: 400px;

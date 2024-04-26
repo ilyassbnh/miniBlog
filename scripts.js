@@ -130,7 +130,69 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("descriptionInput").value = "";
       document.getElementById("submitButton").innerText = "Upload Image";
     };
-  });
+
+ 
+    const searchPosts = () => {
+        const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+        const searchResults = posts.filter(post => post.title.toLowerCase().includes(searchTerm));
+
+        // Display search results
+        displaySearchResults(searchResults);
+
+        // Hide the regular posts display
+        document.getElementById("postsContainer").style.display = "none";
+    };
+
+    const displaySearchResults = (results) => {
+        const searchResultsSection = document.getElementById("searchResults");
+        searchResultsSection.innerHTML = "";
+
+        results.forEach(post => {
+            const postElement = document.createElement("div");
+            postElement.classList.add("card", "mb-3");
+            postElement.style.maxWidth = "540px";
+            postElement.style.position = "relative";
+
+            postElement.innerHTML = `
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="${post.image}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">${post.title}</h5>
+                            <i class="fa-regular fa-heart${post.liked ? " fas" : ""}" style="color: #000000;"></i>
+                            <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                            <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
+                            <p class="card-text">${post.likes} likes</p>
+                            <p class="card-text">${post.description}</p>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Add comment" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
+                            </div>
+                            <button class="btn btn-primary edit-btn" style="position: absolute; top: 10px; right: 60px;">Edit</button>
+                            <button class="btn btn-danger delete-btn" style="position: absolute; top: 10px; right: 10px;">X</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            searchResultsSection.appendChild(postElement);
+        });
+
+        // Show the search results section
+        searchResultsSection.style.display = "block";
+    };
+
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", searchPosts);
+
+    renderPosts();
+   
+});
+
+
+
   
   
   
