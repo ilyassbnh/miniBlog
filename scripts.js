@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const renderPosts = () => {
         const postsContainer = document.getElementById("postsContainer");
+        let reverse = posts.reverse();
         postsContainer.innerHTML = "";
 
-        posts.forEach((post, index) => {
+        reverse.forEach((post, index,reverse) => {
             const card = document.createElement("div");
             card.classList.add("card", "mb-3");
             card.style.maxWidth = "540px";
