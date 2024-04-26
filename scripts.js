@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <input type="text" class="form-control comment-input" placeholder="Add comment" aria-label="Recipient's username" aria-describedby="button-addon2">
                                 <button type="submit" class="btn btn-outline-secondary comment-submit">Add Comment</button>
                             </form>
-                            <button class="btn btn-primary edit-btn" style="position: absolute; top: 10px; right: 60px;">Edit</button>
-                            <button class="btn btn-danger delete-btn" style="position: absolute; top: 10px; right: 10px;">X</button>
+                            <button class="btn btn-primary edit-btn" data-index="${index}" style="position: absolute; top: 10px; right: 60px;">Edit</button>
+                            <button class="btn btn-danger delete-btn" data-index="${index}" style="position: absolute; top: 10px; right: 10px;">X</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const editButton = card.querySelector(".edit-btn");
             editButton.addEventListener("click", (event) => {
-                editingPostIndex = event.target.dataset.index;
+                editingPostIndex = event.target.dataset.index; // Set the editing index when edit button is clicked
                 const post = posts[editingPostIndex];
                 document.getElementById("imageInput").value = ""; // Clear the input value to prevent re-uploading the image
                 document.getElementById("titleInput").value = post.title;
@@ -186,13 +186,12 @@ document.addEventListener("DOMContentLoaded", function () {
                             <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
                             <p class="card-text">${post.likes} likes</p>
                             <p class="card-text">${post.description}</p>
-                            <div class="comments-section"></div>
-                            <form class="comment-form">
-                                <input type="text" class="form-control comment-input" placeholder="Add comment" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                <button type="submit" class="btn btn-outline-secondary comment-submit">Add Comment</button>
-                            </form>
-                            <button class="btn btn-primary edit-btn" style="position: absolute; top: 10px; right: 60px;">Edit</button>
-                            <button class="btn btn-danger delete-btn" style="position: absolute; top: 10px; right: 10px;">X</button>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Add comment" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-regular fa-face-smile" style="color: #000000;"></i></button>
+                            </div>
+                            <button class="btn btn-primary edit-btn" data-index="${index}" style="position: absolute; top: 10px; right: 60px;">Edit</button>
+                            <button class="btn btn-danger delete-btn" data-index="${index}" style="position: absolute; top: 10px; right: 10px;">X</button>
                         </div>
                     </div>
                 </div>
@@ -232,4 +231,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const searchInput = document.getElementById("searchInput");
     searchInput.addEventListener("input", searchPosts);
+
+    renderPosts();
 });
